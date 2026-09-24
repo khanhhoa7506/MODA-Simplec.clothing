@@ -1,0 +1,759 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #1d1d1d;
+    background: #f5f3ef;
+    transition: background-color 0.4s ease;
+}
+
+
+/* ================= HEADER ================= */
+
+.header {
+    height: 80px;
+    padding: 0 7%;
+    background: #111;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.logo span,
+.footer-logo span {
+    color: #d7a84b;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+nav a:hover {
+    color: #d7a84b;
+}
+
+.header-right {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #d7a84b;
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+    min-height: 620px;
+    background: #e8e3da;
+
+    padding: 70px 10%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero-content {
+    width: 50%;
+}
+
+.small-title,
+.section-label {
+    color: #9b7632;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.hero h1 {
+    font-size: 64px;
+    line-height: 1.05;
+    margin: 20px 0;
+    letter-spacing: -2px;
+}
+
+.hero h1 span {
+    color: #9b7632;
+}
+
+.hero-content > p {
+    max-width: 500px;
+    color: #666;
+    line-height: 1.8;
+}
+
+.hero-button {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 16px 28px;
+
+    background: #111;
+    color: white;
+
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.hero-button:hover {
+    background: #9b7632;
+}
+
+.hero-image {
+    width: 42%;
+    text-align: center;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 450px;
+    height: 450px;
+    object-fit: contain;
+}
+
+
+/* ================= PRODUCT ================= */
+
+.products-section {
+    padding: 90px 8%;
+    background: #fff;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title p {
+    color: #9b7632;
+    font-size: 12px;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+.section-title h2 {
+    font-size: 38px;
+    margin: 10px 0;
+}
+
+
+.products {
+    width: 100%;
+    text-align: center;
+}
+
+
+.product-card {
+    width: 30%;
+    margin: 1%;
+    display: inline-block;
+    vertical-align: top;
+
+    background: #f5f3ef;
+    text-align: left;
+
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+}
+
+
+.product-image {
+    height: 330px;
+    background: #e8e3da;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.product-number {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+
+    background: #111;
+    color: white;
+
+    padding: 7px 10px;
+    font-size: 11px;
+}
+
+
+.product-info {
+    padding: 25px;
+}
+
+.product-info h3 {
+    font-size: 25px;
+    margin: 0 0 10px;
+}
+
+.product-info p {
+    color: #777;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+.product-bottom {
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.product-bottom strong {
+    font-size: 18px;
+}
+
+.product-bottom button {
+    border: 1px solid #111;
+    background: transparent;
+    padding: 10px 18px;
+    cursor: pointer;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.product-bottom button:hover {
+    background: #111;
+    color: white;
+}
+
+
+/* ================= SHOPPING ================= */
+
+.shopping-section {
+    padding: 100px 10%;
+
+    background: #171717;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.shopping-left {
+    width: 48%;
+}
+
+.shopping-left h2,
+.color-section h2 {
+    font-size: 48px;
+    line-height: 1.1;
+    margin: 15px 0 25px;
+}
+
+.shopping-left h2 span,
+.color-section h2 span {
+    color: #d7a84b;
+}
+
+.description {
+    color: #aaa;
+    line-height: 1.8;
+    max-width: 500px;
+}
+
+
+.shopping-form {
+    margin-top: 35px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #aaa;
+}
+
+select,
+input {
+    width: 100%;
+    padding: 15px;
+
+    background: #242424;
+    color: white;
+
+    border: 1px solid #444;
+
+    font-size: 15px;
+}
+
+
+.calculate-button {
+    width: 100%;
+    margin-top: 5px;
+
+    padding: 17px;
+
+    background: #d7a84b;
+    color: #111;
+
+    border: none;
+    cursor: pointer;
+
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.calculate-button span {
+    float: right;
+}
+
+.calculate-button:hover {
+    background: white;
+}
+
+
+/* ================= SHOPPING IMAGE ================= */
+
+.shopping-image {
+    width: 42%;
+    text-align: center;
+}
+
+.image-frame {
+    position: relative;
+
+    width: 430px;
+    height: 480px;
+
+    max-width: 100%;
+
+    margin: auto;
+
+    background: #e8e3da;
+}
+
+.image-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.image-label {
+    position: absolute;
+    z-index: 2;
+
+    top: 20px;
+    left: 20px;
+
+    padding: 8px 12px;
+
+    background: #111;
+    color: white;
+
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+
+/* ================= RESULT ================= */
+
+.result-section {
+    padding: 80px 10%;
+    background: white;
+}
+
+.result-heading {
+    margin-bottom: 30px;
+}
+
+.result-heading h2 {
+    font-size: 36px;
+    margin: 5px 0;
+}
+
+
+.result-box {
+    max-width: 850px;
+    margin: auto;
+
+    padding: 30px;
+
+    background: #f5f3ef;
+}
+
+
+.result-row {
+    padding: 18px 0;
+
+    display: flex;
+    justify-content: space-between;
+
+    font-size: 17px;
+}
+
+.discount-row strong {
+    color: #b34848;
+}
+
+.result-line {
+    height: 1px;
+    background: #ccc;
+}
+
+.final-row {
+    font-size: 24px;
+}
+
+.final-row strong {
+    color: #9b7632;
+}
+
+
+/* ================= COLOR ================= */
+
+.color-section {
+    padding: 80px 10%;
+
+    background: #e8e3da;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.color-buttons {
+    text-align: right;
+}
+
+.color-button {
+    padding: 14px 25px;
+    margin-left: 8px;
+
+    border: 1px solid #111;
+    background: transparent;
+
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.color-button span {
+    width: 10px;
+    height: 10px;
+
+    display: inline-block;
+
+    margin-right: 7px;
+
+    border-radius: 50%;
+}
+
+.blue span {
+    background: #397bb8;
+}
+
+.red span {
+    background: #b84040;
+}
+
+.yellow span {
+    background: #d7a84b;
+}
+
+.color-button:hover {
+    background: #111;
+    color: white;
+}
+
+
+/* ================= PRICE ================= */
+
+.price-section {
+    padding: 80px 10%;
+    background: white;
+}
+
+.price-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.price-header h2 {
+    font-size: 40px;
+    margin: 5px 0;
+}
+
+.price-button {
+    padding: 15px 25px;
+
+    background: #111;
+    color: white;
+
+    border: none;
+
+    cursor: pointer;
+
+    font-weight: bold;
+}
+
+.price-button span {
+    margin-left: 15px;
+    font-size: 18px;
+}
+
+.price-button:hover {
+    background: #9b7632;
+}
+
+
+.price-list {
+    max-width: 100%;
+    margin-top: 30px;
+}
+
+.price-item {
+    padding: 20px;
+
+    border-bottom: 1px solid #ddd;
+
+    display: flex;
+    justify-content: space-between;
+
+    font-size: 17px;
+}
+
+.price-item:hover {
+    background: #f5f3ef;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    padding: 60px 10%;
+
+    background: #111;
+    color: white;
+
+    text-align: center;
+}
+
+.footer-logo {
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+
+footer p {
+    color: #999;
+    font-size: 11px;
+    letter-spacing: 3px;
+}
+
+footer small {
+    color: #666;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media screen and (max-width: 800px) {
+
+    .header {
+        height: auto;
+        padding: 20px;
+        display: block;
+        text-align: center;
+    }
+
+    nav {
+        margin: 20px 0;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 7px;
+    }
+
+    .header-right {
+        display: none;
+    }
+
+
+    .hero {
+        padding: 60px 7%;
+        display: block;
+    }
+
+    .hero-content,
+    .hero-image {
+        width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .hero-image {
+        margin-top: 30px;
+    }
+
+
+    .product-card {
+        width: 100%;
+        margin: 0 0 25px;
+    }
+
+
+    .shopping-section {
+        display: block;
+        padding: 70px 7%;
+    }
+
+    .shopping-left,
+    .shopping-image {
+        width: 100%;
+    }
+
+    .shopping-image {
+        margin-top: 40px;
+    }
+
+
+    .shopping-left h2,
+    .color-section h2 {
+        font-size: 38px;
+    }
+
+
+    .color-section {
+        display: block;
+        padding: 60px 7%;
+    }
+
+    .color-buttons {
+        text-align: left;
+        margin-top: 30px;
+    }
+
+    .color-button {
+        margin: 5px 5px 5px 0;
+    }
+
+
+    .price-section {
+        padding: 60px 7%;
+    }
+
+    .price-header {
+        display: block;
+    }
+
+    .price-button {
+        margin-top: 20px;
+    }
+
+}
+
+/* =====================================
+   ĐỔI MÀU GIAO DIỆN
+   ===================================== */
+
+/* MÀU XANH */
+
+body.blue-theme {
+    background-color: #dcecf7;
+}
+
+body.blue-theme .hero {
+    background-color: #c9e3f2;
+}
+
+body.blue-theme .products-section {
+    background-color: #eef8fc;
+}
+
+body.blue-theme .result-section {
+    background-color: #eef8fc;
+}
+
+body.blue-theme .color-section {
+    background-color: #c9e3f2;
+}
+
+
+/* MÀU ĐỎ */
+
+body.red-theme {
+    background-color: #f7dddd;
+}
+
+body.red-theme .hero {
+    background-color: #f2caca;
+}
+
+body.red-theme .products-section {
+    background-color: #fff0f0;
+}
+
+body.red-theme .result-section {
+    background-color: #fff0f0;
+}
+
+body.red-theme .color-section {
+    background-color: #f2caca;
+}
+
+
+/* MÀU VÀNG */
+
+body.yellow-theme {
+    background-color: #f8efc9;
+}
+
+body.yellow-theme .hero {
+    background-color: #f2e5ae;
+}
+
+body.yellow-theme .products-section {
+    background-color: #fffbea;
+}
+
+body.yellow-theme .result-section {
+    background-color: #fffbea;
+}
+
+body.yellow-theme .color-section {
+    background-color: #f2e5ae;
+}

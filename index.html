@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MODA | Mua sắm đơn giản</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <div class="logo">
+            MODA<span>.</span>
+        </div>
+
+        <nav>
+            <a href="#home">Trang chủ</a>
+            <a href="#products">Sản phẩm</a>
+            <a href="#shopping">Mua hàng</a>
+            <a href="#price">Bảng giá</a>
+        </nav>
+
+        <div class="header-right">
+            SHOP ONLINE
+        </div>
+
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <p class="small-title">
+                SIMPLE SHOPPING
+            </p>
+
+            <h1>
+                PHONG CÁCH<br>
+                <span>THEO CÁCH CỦA BẠN</span>
+            </h1>
+
+            <p>
+                Khám phá những sản phẩm thời trang đơn giản,
+                hiện đại và phù hợp với phong cách của bạn.
+            </p>
+
+            <a href="#products" class="hero-button">
+                KHÁM PHÁ SẢN PHẨM
+            </a>
+
+        </div>
+
+        <div class="hero-image">
+
+            <img src="images/ao.jpg" alt="Sản phẩm thời trang">
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= PRODUCTS ================= -->
+
+    <section class="products-section" id="products">
+
+        <div class="section-title">
+
+            <p>SẢN PHẨM CỦA CHÚNG TÔI</p>
+
+            <h2>
+                LỰA CHỌN CỦA BẠN
+            </h2>
+
+        </div>
+
+
+        <div class="products">
+
+            <!-- ÁO -->
+
+            <div class="product-card">
+
+                <div class="product-image">
+
+                    <img
+                        src="images/ao.jpg"
+                        alt="Áo"
+                    >
+
+                    <span class="product-number">
+                        01
+                    </span>
+
+                </div>
+
+                <div class="product-info">
+
+                    <h3>Áo</h3>
+
+                    <p>
+                        Thiết kế đơn giản, dễ phối đồ
+                        và phù hợp với nhiều phong cách.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <strong>
+                            200.000đ
+                        </strong>
+
+                        <button onclick="selectProduct('ao')">
+                            CHỌN
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- QUẦN -->
+
+            <div class="product-card">
+
+                <div class="product-image">
+
+                    <img
+                        src="images/quan.jpg"
+                        alt="Quần"
+                    >
+
+                    <span class="product-number">
+                        02
+                    </span>
+
+                </div>
+
+                <div class="product-info">
+
+                    <h3>Quần</h3>
+
+                    <p>
+                        Kiểu dáng hiện đại, thoải mái
+                        và phù hợp sử dụng hằng ngày.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <strong>
+                            300.000đ
+                        </strong>
+
+                        <button onclick="selectProduct('quan')">
+                            CHỌN
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- GIÀY -->
+
+            <div class="product-card">
+
+                <div class="product-image">
+
+                    <img
+                        src="images/giay.jpg"
+                        alt="Giày"
+                    >
+
+                    <span class="product-number">
+                        03
+                    </span>
+
+                </div>
+
+                <div class="product-info">
+
+                    <h3>Giày</h3>
+
+                    <p>
+                        Phong cách năng động,
+                        tiện dụng và dễ kết hợp.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <strong>
+                            500.000đ
+                        </strong>
+
+                        <button onclick="selectProduct('giay')">
+                            CHỌN
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= SHOPPING ================= -->
+
+    <section class="shopping-section" id="shopping">
+
+        <div class="shopping-left">
+
+            <p class="section-label">
+                SHOPPING
+            </p>
+
+            <h2>
+                TÍNH TIỀN<br>
+                <span>ĐƠN HÀNG</span>
+            </h2>
+
+            <p class="description">
+                Chọn sản phẩm, nhập số lượng và
+                hệ thống sẽ tự động tính số tiền
+                bạn cần thanh toán.
+            </p>
+
+
+            <!-- FORM -->
+
+            <div class="shopping-form">
+
+                <div class="form-group">
+
+                    <label for="product">
+                        SẢN PHẨM
+                    </label>
+
+                    <select
+                        id="product"
+                        onchange="changeImage()"
+                    >
+
+                        <option value="ao">
+                            Áo — 200.000đ
+                        </option>
+
+                        <option value="quan">
+                            Quần — 300.000đ
+                        </option>
+
+                        <option value="giay">
+                            Giày — 500.000đ
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="quantity">
+                        SỐ LƯỢNG
+                    </label>
+
+                    <input
+                        type="number"
+                        id="quantity"
+                        value="1"
+                        min="1"
+                    >
+
+                </div>
+
+
+                <button
+                    class="calculate-button"
+                    onclick="calculateMoney()"
+                >
+                    TÍNH TIỀN
+                    <span>→</span>
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- ẢNH SẢN PHẨM -->
+
+        <div class="shopping-image">
+
+            <div class="image-frame">
+
+                <span class="image-label">
+                    MODA COLLECTION
+                </span>
+
+                <img
+                    id="productImage"
+                    src="images/ao.jpg"
+                    alt="Sản phẩm"
+                >
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= RESULT ================= -->
+
+    <section class="result-section">
+
+        <div class="result-heading">
+
+            <p>
+                ORDER SUMMARY
+            </p>
+
+            <h2>
+                CHI TIẾT ĐƠN HÀNG
+            </h2>
+
+        </div>
+
+
+        <div class="result-box">
+
+            <div class="result-row">
+
+                <span>
+                    Tiền hàng
+                </span>
+
+                <strong id="total">
+                    0đ
+                </strong>
+
+            </div>
+
+
+            <div class="result-row discount-row">
+
+                <span>
+                    Giảm giá
+                </span>
+
+                <strong id="discount">
+                    0đ
+                </strong>
+
+            </div>
+
+
+            <div class="result-line"></div>
+
+
+            <div class="result-row final-row">
+
+                <span>
+                    PHẢI TRẢ
+                </span>
+
+                <strong id="final">
+                    0đ
+                </strong>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= COLOR ================= -->
+
+    <section class="color-section">
+
+        <div>
+
+            <p class="section-label">
+                PERSONALIZE
+            </p>
+
+            <h2>
+                CHỌN MÀU<br>
+                <span>BẠN YÊU THÍCH</span>
+            </h2>
+
+        </div>
+
+
+        <div class="color-buttons">
+
+            <button
+                class="color-button blue"
+                onclick="changeColor('blue')"
+            >
+                <span></span>
+                XANH
+            </button>
+
+
+            <button
+                class="color-button red"
+                onclick="changeColor('red')"
+            >
+                <span></span>
+                ĐỎ
+            </button>
+
+
+            <button
+                class="color-button yellow"
+                onclick="changeColor('yellow')"
+            >
+                <span></span>
+                VÀNG
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= PRICE ================= -->
+
+    <section class="price-section" id="price">
+
+        <div class="price-header">
+
+            <div>
+
+                <p class="section-label">
+                    PRICE LIST
+                </p>
+
+                <h2>
+                    BẢNG GIÁ
+                </h2>
+
+            </div>
+
+
+            <button
+                class="price-button"
+                onclick="showPriceList()"
+            >
+                XEM BẢNG GIÁ
+                <span>+</span>
+            </button>
+
+        </div>
+
+
+        <div
+            id="priceList"
+            class="price-list"
+        ></div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-logo">
+            MODA<span>.</span>
+        </div>
+
+        <p>
+            SIMPLE SHOPPING · SIMPLE STYLE
+        </p>
+
+        <small>
+            © 2026 MODA. All rights reserved.
+        </small>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
